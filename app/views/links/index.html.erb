@@ -1,0 +1,6 @@
+<% @links.each do |link| %>
+  <ul>
+    <li><%= link_to link.slug, "/urls/#{link.slug}" %> | <%= link_to 'Clicks count', "/urls/#{link.slug}/stats" %></li>
+  </ul>
+<% end %>
+<%= link_to 'Create another link', new_link_path %>

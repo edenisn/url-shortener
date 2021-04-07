@@ -1,0 +1,10 @@
+<h1>Links#new</h1>
+<%= flash[:error] %>
+<%= form_with model: @link do |form| %>
+  <p>
+    Please, input url you want to shorten: <%= form.text_field :url %>
+  </p>
+  <%= form.submit %>
+<% end %>
+
+<%= link_to 'All links', links_path %>
