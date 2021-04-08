@@ -23,7 +23,7 @@ class LinksController < ApplicationController
 
   def show
     if @link.present?
-      @link.update_attribute(:clicked, @link.clicked + 1)
+      Link.increment_counter(:clicked, @link.id)
     else
       render file: "#{Rails.root}/public/404", layout: false, status: 404
     end
